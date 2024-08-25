@@ -11,6 +11,7 @@ export default function App() {
         <Container fluid>
           <NavDropdown title='ReactJS Bootstrap sample'>
             <NavDropdown.Item href='/button-sample'>Button sample</NavDropdown.Item>
+            <NavDropdown.Item href='/modal-sample'>Modal sample</NavDropdown.Item>
           </NavDropdown>
         </Container>
       </Navbar>
