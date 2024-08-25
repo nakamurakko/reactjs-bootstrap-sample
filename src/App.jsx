@@ -10,7 +10,7 @@ export default function App() {
       <Navbar className='bg-body-tertiary' expand='lg' sticky='top'>
         <Container fluid>
           <NavDropdown title='ReactJS Bootstrap sample'>
-
+            <NavDropdown.Item href='/button-sample'>Button sample</NavDropdown.Item>
           </NavDropdown>
         </Container>
       </Navbar>
