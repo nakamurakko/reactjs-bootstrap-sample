@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button, Table } from "react-bootstrap";
 import SampleModalDialog from "./sample-modal-dialog/sample-modal-dialog";
 import SampleSleepModalDialog from "./sample-sleep-modal-dialog/sample-sleep-modal-dialog";
@@ -8,7 +8,7 @@ import SampleUseEffectModalDialog from "./sample-use-effect-modal-dialog/sample-
 /**
  * Modal サンプルコンポーネント。
  *
- * @returns {JSX.Element}
+ * @returns {React.JSX.Element}
  */
 export default function ModalSample() {
 

@@ -1,10 +1,22 @@
-import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+
+SampleUseEffectModalDialog.propTypes = {
+  showDialog: PropTypes.bool.isRequired,
+  /**
+   * 画面を閉じる処理。
+   * @type {PropTypes.Requireable<Function>}
+   * @param {string} selectedAnimal 選択した色。
+   * @returns {void}
+   */
+  onClose: PropTypes.func.isRequired
+};
 
 /**
  * Sample Modal ダイアログ。
- *
- * @returns
+ * @param {SampleUseEffectModalDialog.propTypes}
+ * @returns {React.JSX.Element}
  */
 export default function SampleUseEffectModalDialog({ showDialog, onClose }) {
 

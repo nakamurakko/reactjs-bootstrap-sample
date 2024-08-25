@@ -1,10 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 /**
  * Button サンプルコンポーネント。
  *
- * @returns {JSX.Element}
+ * @returns {React.JSX.Element}
  */
 export default function ButtonSample() {
 

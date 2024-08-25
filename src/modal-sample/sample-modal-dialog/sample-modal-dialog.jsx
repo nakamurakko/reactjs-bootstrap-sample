@@ -1,13 +1,30 @@
+import PropTypes from 'prop-types';
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 
+SampleModalDialog.propTypes = {
+  showDialog: PropTypes.bool.isRequired,
+  /**
+   * 画面を閉じる処理。
+   * @type {PropTypes.Requireable<Function>}
+   * @param {string} selectedAnimal 選択した動物。
+   * @returns {void}
+   */
+  onClose: PropTypes.func.isRequired
+};
+
+// /**
+//  * @typedef Props
+//  * @type {object}
+//  * @property {boolean} showDialog
+//  * @property {Function} onClose
+//  * @param {Props} props
+//  * @returns {React.JSX.Element}
+//  */
 /**
- * @typedef Props
- * @type {object}
- * @property {boolean} showDialog
- * @property {Function} onClose
- * @param {Props} props
- * @returns
+ * Sample Modal ダイアログ。
+ * @param {SampleModalDialog.propTypes}
+ * @returns {React.JSX.Element}
  */
 export default function SampleModalDialog({ showDialog, onClose }) {
 

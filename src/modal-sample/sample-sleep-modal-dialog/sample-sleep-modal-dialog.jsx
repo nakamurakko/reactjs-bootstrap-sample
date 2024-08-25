@@ -1,9 +1,23 @@
-import { useState } from "react";
+import PropTypes from 'prop-types';
+import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { SampleService } from "../../sample-service";
 
+SampleSleepModalDialog.propTypes = {
+  showDialog: PropTypes.bool.isRequired,
+  /**
+   * 画面を閉じる処理。
+   * @type {PropTypes.Requireable<Function>}
+   * @param {string} selectedAnimal 選択した車種。
+   * @returns {void}
+   */
+  onClose: PropTypes.func.isRequired
+};
+
 /**
  * Sample Modal ダイアログ。
+ * @param {SampleSleepModalDialog.propTypes}
+ * @returns {React.JSX.Element}
  */
 export default function SampleSleepModalDialog({ showDialog, onClose }) {
 

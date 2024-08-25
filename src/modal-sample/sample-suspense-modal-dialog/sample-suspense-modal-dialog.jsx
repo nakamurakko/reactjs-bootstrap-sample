@@ -1,11 +1,23 @@
-import { Suspense, useState } from "react";
+import PropTypes from 'prop-types';
+import React, { Suspense, useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { SampleService } from "../../sample-service";
 
+SampleSuspenseModalDialog.propTypes = {
+  showDialog: PropTypes.bool.isRequired,
+  /**
+   * 画面を閉じる処理。
+   * @type {PropTypes.Requireable<Function>}
+   * @param {string} selectedAnimal 選択した果物。
+   * @returns {void}
+   */
+  onClose: PropTypes.func.isRequired
+};
+
 /**
  * Sample Modal ダイアログ。
- *
- * @returns
+ * @param {SampleSuspenseModalDialog.propTypes}
+ * @returns {React.JSX.Element}
  */
 export default function SampleSuspenseModalDialog({ showDialog, onClose }) {
 
@@ -97,6 +109,26 @@ export default function SampleSuspenseModalDialog({ showDialog, onClose }) {
 
 }
 
+DialogContent.propTypes = {
+  /**
+   * 処理が完了しているかどうか。
+   */
+  isCompleted: PropTypes.bool,
+  /**
+   * 起動処理。
+   */
+  onStartup: PropTypes.func,
+  /**
+   * 完了処理。
+   */
+  onCompleted: PropTypes.func
+};
+
+/**
+ *
+ * @param {DialogContent.propTypes}
+ * @returns
+ */
 function DialogContent({ isCompleted, onStartup, onCompleted }) {
 
   if (isCompleted) {
