@@ -27,7 +27,7 @@ export default function SampleSleepModalDialog({ showDialog, onClose }) {
    * Modal 表示時の処理。
    */
   const handleShow = () => {
-    void SampleService.sleep()
+    void SampleService.sleep(3000)
       .then(() => {
         setSelectedCar('SUV');
       });

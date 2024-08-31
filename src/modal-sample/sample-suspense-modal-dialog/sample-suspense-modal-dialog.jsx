@@ -29,7 +29,7 @@ export default function SampleSuspenseModalDialog({ showDialog, onClose }) {
    */
   const handleStartup = async () => {
     setIsCompleted(false);
-    await SampleService.sleep();
+    await SampleService.sleep(3000);
   };
 
   /**

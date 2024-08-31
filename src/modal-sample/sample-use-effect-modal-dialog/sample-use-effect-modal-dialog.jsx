@@ -30,7 +30,7 @@ export default function SampleUseEffectModalDialog({ showDialog, onClose }) {
       setTimeout(() => {
         setSelectedColor('Blue');
         resolve(null);
-      }, 1000);
+      }, 3000);
     });
   }, []);
 
