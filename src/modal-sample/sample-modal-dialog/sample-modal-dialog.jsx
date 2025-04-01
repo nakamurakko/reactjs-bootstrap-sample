@@ -80,20 +80,12 @@ export default function SampleModalDialog({ showDialog, onClose }) {
         </Modal.Body>
         <Modal.Footer>
           <Button
-            onClick={
-              (event) => {
-                onClose(selectedAnimal);
-              }
-            }
+            onClick={() => onClose(selectedAnimal)}
           >
             Select
           </Button>
           <Button
-            onClick={
-              (event) => {
-                onClose('');
-              }
-            }
+            onClick={() => onClose('')}
           >
             Close
           </Button>

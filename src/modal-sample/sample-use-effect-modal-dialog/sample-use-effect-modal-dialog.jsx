@@ -76,20 +76,12 @@ export default function SampleUseEffectModalDialog({ showDialog, onClose }) {
         </Modal.Body>
         <Modal.Footer>
           <Button
-            onClick={
-              (event) => {
-                onClose(selectedColor);
-              }
-            }
+            onClick={() => onClose(selectedColor)}
           >
             Select
           </Button>
           <Button
-            onClick={
-              (event) => {
-                onClose('');
-              }
-            }
+            onClick={() => onClose('')}
           >
             Close
           </Button>

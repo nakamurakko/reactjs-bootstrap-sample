@@ -76,20 +76,12 @@ export default function SampleSleepModalDialog({ showDialog, onClose }) {
         </Modal.Body>
         <Modal.Footer>
           <Button
-            onClick={
-              (event) => {
-                onClose(selectedCar);
-              }
-            }
+            onClick={() => onClose(selectedCar)}
           >
             Select
           </Button>
           <Button
-            onClick={
-              (event) => {
-                onClose('');
-              }
-            }
+            onClick={() => onClose('')}
           >
             Close
           </Button>

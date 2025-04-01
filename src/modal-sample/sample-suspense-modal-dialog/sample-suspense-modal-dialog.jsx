@@ -85,20 +85,12 @@ export default function SampleSuspenseModalDialog({ showDialog, onClose }) {
         </Modal.Body>
         <Modal.Footer>
           <Button
-            onClick={
-              (event) => {
-                onClose(selectedFruit);
-              }
-            }
+            onClick={() => onClose(selectedFruit)}
           >
             Select
           </Button>
           <Button
-            onClick={
-              (event) => {
-                onClose('');
-              }
-            }
+            onClick={() => onClose('')}
           >
             Close
           </Button>
