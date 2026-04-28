@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Table } from "react-bootstrap";
 import SampleModalDialog from "./sample-modal-dialog/sample-modal-dialog";
 import SampleSleepModalDialog from "./sample-sleep-modal-dialog/sample-sleep-modal-dialog";
 import SampleSuspenseModalDialog from "./sample-suspense-modal-dialog/sample-suspense-modal-dialog";
 import SampleUseEffectModalDialog from "./sample-use-effect-modal-dialog/sample-use-effect-modal-dialog";
+import SampleUseImperativeHandleDialog from "./sample-use-imperative-handle-dialog/sample-use-imperative-handle-dialog";
 
 /**
  * Modal サンプルコンポーネント。
@@ -95,6 +96,27 @@ export default function ModalSample() {
 
   //#endregion
 
+  //#region useImperativeHandle を使用したダイアログサンプル。
+
+  /**
+   * @type {React.RefObject<import("./sample-use-imperative-handle-dialog/sample-use-imperative-handle-dialog").SampleUseImperativeHandleDialogRef>}
+   */
+  const sampleUseImperativeHandleDialogRef = useRef(null);
+  const [selectedGem, setSelectedGem] = useState('');
+
+  const handleShoweUseImperativeDialog = async () => {
+    // sampleUseImperativeHandleDialogRef?.current?.showdDialog((value) => {
+    //   setSelectedGem(value);
+    // });
+
+    await sampleUseImperativeHandleDialogRef?.current?.showDialogAsync()
+      .then(value => {
+        setSelectedGem(value);
+      });
+  };
+
+  //#endregion
+
   return (
     <>
       <h2>Modal sample</h2>
@@ -182,7 +204,22 @@ export default function ModalSample() {
               />
             }
           </tr>
+          <tr>
+            <td>
+              <Button
+                onClick={handleShoweUseImperativeDialog}
+              >
+                Show dialog (useImperativeHandle)
+              </Button>
+            </td>
+            <td>
+              <span>{selectedGem}</span>
+            </td>
 
+            <SampleUseImperativeHandleDialog
+              ref={sampleUseImperativeHandleDialogRef}
+            />
+          </tr>
         </tbody>
       </Table>
     </>
