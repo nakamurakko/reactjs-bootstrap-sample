@@ -15,6 +15,7 @@ export default function App() {
       <Navbar className='bg-body-tertiary' expand='lg' sticky='top'>
         <Container fluid>
           <NavDropdown title='ReactJS Bootstrap sample'>
+            <NavDropdown.Item href='/badge-sample'>Badge sample</NavDropdown.Item>
             <NavDropdown.Item href='/button-sample'>Button sample</NavDropdown.Item>
             <NavDropdown.Item href='/modal-sample'>Modal sample</NavDropdown.Item>
             <NavDropdown.Item href='/tab-sample'>Tab sample</NavDropdown.Item>
