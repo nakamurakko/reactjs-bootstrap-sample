@@ -1,13 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
 import { Container, Navbar, NavDropdown } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
 import './App.css';
 
-/**
- *
- * @returns {React.JSX.Element}
- */
 export default function App() {
 
   return (
