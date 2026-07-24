@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Button, Table } from "react-bootstrap";
 import SampleModalDialog from "./sample-modal-dialog/sample-modal-dialog";
 import SampleSleepModalDialog from "./sample-sleep-modal-dialog/sample-sleep-modal-dialog";

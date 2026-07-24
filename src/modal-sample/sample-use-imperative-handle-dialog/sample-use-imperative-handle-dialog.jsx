@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useRef, useState } from "react";
+import { useImperativeHandle, useRef, useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 
 /**
@@ -9,8 +9,10 @@ import { Button, Form, Modal } from "react-bootstrap";
 
 /**
  * Sample Modal ダイアログ。
+ * @param {SampleUseImperativeHandleDialogRef}
+ * @returns {React.JSX.Element}
  */
-const SampleUseImperativeHandleDialog = forwardRef((props, ref) => {
+export default function SampleUseImperativeHandleDialog({ ref }) {
 
   const dialogRef = useRef(null);
   const [showSelf, setShowSelf] = useState(false);
@@ -111,8 +113,4 @@ const SampleUseImperativeHandleDialog = forwardRef((props, ref) => {
     </>
   );
 
-});
-
-SampleUseImperativeHandleDialog.displayName = SampleUseImperativeHandleDialog.name;
-
-export default SampleUseImperativeHandleDialog;
+}
